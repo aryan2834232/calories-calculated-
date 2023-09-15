@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calorie Tracker</h1>
+        <label for="foodItem">Food Item:</label>
+        <input type="text" id="foodItem" placeholder="Enter food item">
+        <label for="calories">Calories:</label>
+        <input type="number" id="calories" placeholder="Enter calories">
+        <button onclick="addFoodItem()">Add Food</button>
+        <div id="calorieList">
+            <h2>Today's Food:</h2>
+            <ul id="foodList"></ul>
+        </div>
+        <div id="calorieCount">
+            <h2>Calories Consumed Today:</h2>
+            <span id="totalCalories">0</span>
+        </div>
+        <div class="center-button">
+            <button onclick="clearData()">Clear All Data</button>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+        <!-- Add an input field for custom calorie goal -->
+<label for="customGoal">Custom Calorie Goal:</label>
+<input type="number" id="customGoal" placeholder="Enter your goal">
+<button onclick="setCustomGoal()">View Calorie Goal Chart</button>
+        <!-- Add a section for the Diet Chart -->
+<div id="dietChart">
+    <h2>Diet Chart</h2>
+    <label for="calorieGoal">Enter Daily Calorie Goal:</label>
+    <input type="number" id="calorieGoal" placeholder="Enter your calorie goal">
+    <button onclick="generateDietChart()">Generate Diet Chart</button>
+    <ul id="dietList"></ul>
+</div>
+
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
